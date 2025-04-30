@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    assetModuleFilename: 'images/[name][ext]', 
+    assetModuleFilename: 'images/[name][ext]',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -21,19 +21,25 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i, 
+        test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
       },
     ],
   },
   devServer: {
     static: {
-        directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'dist'),
     },
     compress: true,
     port: 9000,
-    hot: true, 
-    liveReload: true, 
+    hot: true,
     open: true,
+  },
+  devtool: 'source-map', 
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      config: [__filename],
+    },
   },
 };

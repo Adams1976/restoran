@@ -1,7 +1,7 @@
 import loadHome from './home.js';
-import loadMenu from '../menu.js';
+import loadMenu from './menu.js'; // Исправлен путь
 import loadContact from './contact.js';
-import loadMap from '../map.js'; 
+import loadMap from './map.js';
 
 import './style.css';
 

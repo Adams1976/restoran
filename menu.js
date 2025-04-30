@@ -18,7 +18,7 @@ export default function loadMenu() {
 
         const menuImg = document.createElement('img');
         menuImg.classList.add('menu-img');
-        menuImg.setAttribute('src', './dist/images/fac19e0f2cbb5be17b6c.png');
+        menuImg.setAttribute('src', './images/fac19e0f2cbb5be17b6c.png');
         menuImg.setAttribute('width', '210px');
 
         const blockInfo = document.createElement('div');
@@ -36,7 +36,7 @@ export default function loadMenu() {
 
         for (let j = 0; j < 5; j++) { 
             const iconStar = document.createElement('img');
-            iconStar.setAttribute('src', './dist/images/icons8-звезда-48.png');
+            iconStar.setAttribute('src', './images/icons8-звезда-48.png');
             iconStar.setAttribute('width', '25px');
             blockIcon.appendChild(iconStar);
         }
